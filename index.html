@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablero de Triqui</title>
+<style>
+    .titular{
+        margin-top: 60px;
+        margin-bottom: 0;
+        
+    }
+
+    .game-restart{
+        color: aliceblue;
+        background-color: rgb(6, 30, 6);
+        border-radius: 10%;
+        display: flex;
+
+    }
+    h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color:rgb(6, 30, 6);
+        color: rgba(165, 168, 0, 0.819);
+        border-radius: 10px;
+    }
+    h2{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgb(6, 30, 6);
+        color: rgba(165, 168, 0, 0.819);
+        border-radius: 10px;
+    }
+    body{
+        display:flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #1c4d1f; /* Color de fondo azul */
+    }
+
+    .board {
+        display: grid;
+        grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px cada una */
+        grid-template-rows: repeat(3, 100px); /* 3 filas de 100px cada una */
+        gap: 2px; /* Espacio entre las celdas */
+        background-color: white; /* Color de fondo del tablero */
+        padding: 10px; /* Espacio interno del tablero */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    }
+
+    .cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #14532d; /* Borde azul */
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .cell:hover {
+      background-color: #0d5818;
+      box-shadow: 0 0 5px #3b6141;
+    }
+</style>
+</head>
+<body>
+    <h1 class="tittle1" >Diviertete :)</h1>
+  <div class="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+  </div>
+  <h2 class="tittle2" >Turno del jugador</h2>
+  <button class="game-restart">Reiniciar Juego</button>
+  <script src="triqui.js"></script>
+  <p class="titular">@Julian Mancipe</p>
+</body>
+</html>
